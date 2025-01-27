@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康码</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcome-screen">
+        <img src="assets/welcome.jpg" alt="Welcome">
+        <button onclick="showLoginForm()">进入</button>
+    </div>
+    <div id="login-form" style="display: none;">
+        <h2>登录</h2>
+        <label for="name">姓名:</label>
+        <input type="text" id="name" name="name" placeholder="请输入姓名">
+        <label for="idNumber">身份证号:</label>
+        <input type="text" id="idNumber" name="idNumber" placeholder="请输入身份证号">
+        <button onclick="validateAndGenerate()">登录</button>
+        <p id="error-message" class="error-message"></p>
+    </div>
+    <div id="health-code" style="display: none;">
+        <h1>健康码</h1>
+        <img id="qrcode" alt="QR Code">
+        <p id="user-info"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
